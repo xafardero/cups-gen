@@ -5,11 +5,11 @@ import (
 )
 
 func TestGenerate(t *testing.T) {
-	got := Generate()
+	for i := 0; i < 10000; i++ {
+		got := Generate()
 
-	if len(got) != 20 {
-		t.Errorf("Wrong lenght")
+		if len(got) != 20 {
+			t.Errorf("Wrong lenght")
+		}
 	}
-
 }
-
